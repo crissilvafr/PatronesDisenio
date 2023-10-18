@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Adapter
+﻿namespace Adapter
 {
-    public class PagoPaypal
+    public class PagoPaypal: IPago
     {
         private readonly string _usuariopp;
 
@@ -15,7 +9,7 @@ namespace Adapter
             _usuariopp = usuariopp;
         }
 
-        public void RealizarPago()
+        public void Cobrar()
         {
             Console.WriteLine($"Pago realizado con la cuenta: {_usuariopp}");
         }

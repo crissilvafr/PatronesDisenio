@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Decorator
+﻿namespace Decorator
 {
     public class DescuentoDecorador : VentaDecorador
     {
@@ -15,7 +9,7 @@ namespace Decorator
         }
 
         public override decimal CalcularTotal()
-        { 
+        {
             decimal totalBase = base.CalcularTotal();
             decimal descuento = totalBase * (_porcentajeDescuento / 100);
             return totalBase - descuento;

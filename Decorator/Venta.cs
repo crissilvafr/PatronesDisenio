@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Decorator
+﻿namespace Decorator
 {
     public class Venta : IVenta
     {
@@ -14,9 +8,9 @@ namespace Decorator
             _productos = productos;
         }
 
-        public Venta():this(new List<string>())
+        public Venta() : this(new List<string>())
         {
-            
+
         }
 
         public decimal CalcularTotal()

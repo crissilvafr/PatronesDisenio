@@ -9,6 +9,6 @@ IPago pago1 = new PagoEfectivo();
 Ventas venta1 = new Ventas(pago1);
 venta1.ProcesarPago();
 
-IPago pagoTarjeta = new TarjetaCredito("0112358");
+IPago pagoTarjeta = new PagoPaypal("User0");
 Ventas venta2 = new Ventas(pagoTarjeta);
 venta2.ProcesarPago();

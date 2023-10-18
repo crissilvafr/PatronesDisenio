@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Adapter
+﻿namespace Adapter
 {
-    public class PagoVales
+    public class PagoVales: IPago
     {
         private readonly string _tarjetaVales;
 
@@ -15,7 +9,7 @@ namespace Adapter
             _tarjetaVales = tarjetaVales;
         }
 
-        public void RealizarPago()
+        public void Cobrar()
         {
             Console.WriteLine($"Pago realizado con la tarjeta de vales: {_tarjetaVales}");
         }
